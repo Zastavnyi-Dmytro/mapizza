@@ -1,4 +1,71 @@
-<div class="container">
-    <div class="header-top"></div>
-    <div class="header-bottom"></div>
+<div class="header-wrapper">
+    <div class="container">
+        <div class="header-top scroll-hide" [class.hidden]="isHidden">
+            <div class="header-phone">
+                <a href="">+38 097 18 306 18 </a>
+                <p>нд-чт 09:30 − 21:00 <br>  пт- сб 09:30 − 22:00 </p>
+            </div>
+            <div class="header-links">
+                <ul>
+                    <li><a href="">Про нас</a></li>
+                    <li><a href="">Доставка та оплата</a></li>
+                    <li><a href="">Акції</a></li>
+                    <li><a href="">Контакти</a></li>
+                    <li><a href="">Вакансії</a></li>
+                    <li><a href="">Новини</a></li>
+                    <li><a href="" class="feedback">Відгук</a></li>
+                </ul>
+            </div>
+            <div class="header-info">
+                <img src="https://mapizza.com.ua/wp-content/themes/mamma-italiana/img/icons/i-header-top.svg" alt="годинник">
+                <p><b>29 хв</b> — середній час доставки</p>
+            </div>
+            <div class="header-user">
+                <div class="header-favorite">
+                    <mat-icon>favorite</mat-icon>
+                </div>
+                <div class="header-cabinet-btn">
+                    <mat-icon>person</mat-icon>
+                    <button type="button">Вхід</button>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <a href="https://mapizza.com.ua/" class="header-logo">
+                <img src="https://mapizza.com.ua/wp-content/uploads/2022/03/logo-pizza-red.svg" alt="лого">
+            </a>
+            <div class="menu-list">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-1.svg" class="img" alt="піца">
+                            <span>ПІЦА</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-2.svg" class="img" alt="салати">
+                            <span>САЛАТИ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-3.svg" class="img" alt="десерти">
+                            <span>ДЕСЕРТИ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-4.svg" class="img" alt="напої">
+                            <span>НАПОЇ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-basket">
+                <mat-icon>shopping_cart</mat-icon>
+                <p>0 грн</p>
+            </div>
+        </div>
+    </div>
 </div>

@@ -12,6 +12,9 @@ import { ContactsComponent } from './pages/contacts/contacts/contacts.component'
 import { VacancyComponent } from './pages/vacancy/vacancy/vacancy.component';
 import { NewsComponent } from './pages/news/news/news.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,9 @@ import { NewsComponent } from './pages/news/news/news.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

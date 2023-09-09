@@ -1,0 +1,130 @@
+.container{
+    width: 100%;
+    max-width: 1730px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 120px;
+    background-color: #f5faf2;
+    border-radius: 16px;
+    position: relative;
+}
+
+.footer-info{
+    img{
+        width: 200px;
+        height: 48px;
+    }
+    ul{
+        padding-left: 0;
+    }
+    .footer-phone{
+        margin-top: 20px;
+        a{
+            color: #d22730;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 600;
+            line-height: 1.5em;
+        }
+        p{
+            margin-top: 0;
+        }
+    }
+    .footer-social{
+        a{
+            background-color: #d22730;
+            width: 32px;
+            height: 32px;
+            display: block;
+            border-radius: 100%;
+        }
+        img{
+            display: block;
+            width: 16px;
+            height: 16px;
+            margin: 0 auto;
+            padding-top: 8px;
+        }
+        ul{
+            display: flex;
+            padding-left: 0;
+            li{
+                margin-right: 16px;
+            }
+        }
+    }
+    .download-img{
+        display: flex;
+        img{
+            width: 120px;
+            height: 35px;
+            margin-right: 20px;
+        }
+    }
+}
+
+.footer-lists{
+    ul{
+        color: #636662;
+        font-size: 16px;
+        a{
+            color: #636662;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    .footer-title{
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+    }
+}
+
+.background-img-tomato{
+    position: absolute;
+    top: -50px;
+    left: -50px;
+}
+.background-img-pepper{
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 120px;
+    align-items: center;
+    color: #636662;
+    font-size: 14px;
+    a{
+        color: #636662;
+    }
+    .footer-developer{
+        span{
+            margin-right: 5px;
+        }
+    }
+    .footer-cards{
+        img{
+            margin-right: 5px;
+        }
+    }
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
