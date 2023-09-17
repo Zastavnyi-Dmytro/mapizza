@@ -1,0 +1,31 @@
+<div class="container">
+    <c-carousel [interval]="5000" transition="slide" class="carousel">
+        <c-carousel-inner>
+            <c-carousel-item *ngFor="let slide of slides">
+                <div class="carousel-content">
+                    <div class="carousel-left">
+                        <div class="carousel-left-text">
+                            <div class="decor">
+                                <img src="https://mapizza.com.ua/wp-content/uploads/2022/03/banner-decor.svg" alt="banner decor">
+                            </div>
+                            <h2>{{slide.title}}</h2>
+                            <p>{{slide.subtitle}}</p>
+                            <a href="" class="btn">
+                                <button type="button">ЗАМОВИТИ</button>
+                                <mat-icon class="arrow">navigate_next</mat-icon>
+                            </a>
+                        </div>
+                        <div class="corousel-left-nav">
+                            <c-carousel-control [routerLink] class="carousel-nav prev" caption="«" direction="prev"></c-carousel-control>
+                            <c-carousel-control [routerLink] class="carousel-nav next" caption="»" direction="next"></c-carousel-control>
+                        </div>
+                    </div>
+                    <div class="carousel-right">
+                        <img [src]="slide.src" alt="{{slide.title}}" class="d-block carousel-img" loading="lazy" />
+                    </div>
+                </div>
+            </c-carousel-item>
+        </c-carousel-inner>
+
+    </c-carousel>
+</div>

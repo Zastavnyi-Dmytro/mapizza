@@ -1,0 +1,208 @@
+.container{
+    width: 100%;
+    max-width: 1730px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+    margin-top: 220px;
+}
+
+.contact-block{
+    display: flex;
+    max-width: 1730px;
+    width: 1411px;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #d1d9ce;
+    border-radius: 16px;
+    box-shadow: 20px 20px 0px #f2faf2;
+    align-items: center;
+    position: relative;
+    background-color: white;
+}
+
+.left-block{
+    padding: 30px 50px 40px;
+    max-width: 450px;
+    background-color: white;
+    z-index: 3;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
+.text{
+    color: #636662;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.img{
+    margin-right: 15px;
+}
+
+.contact-link{
+    display: flex;
+}
+
+.left-block-shedule{
+    border-top: 1px solid #d1d9ce;
+}
+
+.shedule-info{
+    display: flex;
+}
+
+.left-block-social{
+    border-top: 1px solid #d1d9ce;
+}
+
+.social-links{
+    display: flex;
+    a{
+        background-color: #d22730;
+        width: 32px;
+        height: 32px;
+        display: block;
+        border-radius: 100%;
+        margin-right: 20px;
+    }
+    img{
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin: 0 auto;
+        padding-top: 8px;
+    }
+}
+
+.right-block{
+    border-left: 1px solid #d1d9ce;
+    padding: 30px 60px 40px;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+}
+
+.right-block-form{
+    input{
+        width: 96.5%;
+        font-size: 16px;
+        height: 54px;
+        line-height: 54px;
+        outline: 1px solid #d1d9ce;
+        border: none;
+        border-radius: 12px;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+    textarea{
+        width: 96.5%;
+        font-size: 16px;
+        height: 54px;
+        line-height: 54px;
+        background: var(--clr-white);
+        border: 1px solid #d1d9ce;
+        border-radius: 12px;
+        padding: 0 15px;
+        resize: none;
+        overflow: auto;
+    }
+    input:focus{
+        border: none;
+    }
+    .message{
+        height: 102px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        text-align: start;
+    }
+}
+
+.right-block-title{
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.form-name-phone{
+    display: flex;
+    justify-content: space-between;
+    .input-phone{
+        margin-left: 20px;
+    }
+}
+
+.upload-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    input{
+        border: none;
+        width: 200px;
+        padding: 0;
+        opacity: 0;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    .btn{
+        background-color: #d22730;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.5s ease;
+        width: 177px;
+        justify-content: center;
+        button{
+            border: none;
+            background-color: #d22730;
+            color: white;
+            margin-right: 20px;
+            font-size: 14px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+    }
+    .input-upload{
+        display: flex;
+        position: absolute;
+        left: 0;
+        align-items: center;
+        z-index: -1;
+        cursor: pointer;
+        color: #d22730;
+        .input-upload-text{
+            margin-left: 20px;
+            p{
+                margin: 0;
+                text-align: start;
+                font-size: 16px;
+            }
+            .grey{
+                color: #636662;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #636662;
+}

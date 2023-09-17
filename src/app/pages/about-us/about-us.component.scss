@@ -1,0 +1,315 @@
+.container{
+    width: 100%;
+    max-width: 1730px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.banner{
+    width: 1730px;
+    height: 500px;
+    background-image: url("https://mapizza.com.ua/wp-content/uploads/2023/07/photo_2023-07-31_14-17-44.jpg.webp");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    margin-top: 220px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 16px;
+    h2{
+        color: white;
+        font-size: 40px;
+    }
+}
+
+.benefits{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #d1d9ce;
+    border-radius: 25px;
+    padding: 45px 60px;
+    margin-top: 90px;
+    box-shadow: 20px 20px 0px #f2faf2;
+    margin-bottom: 90px;
+    position: relative;
+    .benefits-item{
+        width: 25%;
+        padding: 0 30px;
+    }
+    .title{
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+    .info{
+        font-size: 18px;
+        color: #636662;
+    }
+    .benefits-decor{
+        position: absolute;
+        top: -150px;
+        left: -140px;
+        z-index: -1;
+    }
+}
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+    img{
+        border-radius: 25px;
+    }
+    .section-text{
+        max-width: 670px;
+        padding: 0 30px;
+        margin: 0 auto;
+        align-items: center;
+        position: relative;
+        .decor-img{
+            position: absolute;
+            left: -20px;
+            bottom: 35px;
+            z-index: -1;
+        }
+        .section-title{
+            font-size: 40px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.2em;
+        }
+        .section-info{
+            font-size: 20px;
+            color: #636662;
+        }
+    }
+}
+
+.video-section{
+    display: block;
+    margin: 0 auto;
+    max-width: 1670px;
+    .section-text{
+        max-width: 1153px;
+        .section-title{
+            text-align: center;
+        }
+    }
+    .img{
+        text-align: center;
+    }
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.contact-block{
+    display: flex;
+    max-width: 1730px;
+    width: 1411px;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #d1d9ce;
+    border-radius: 16px;
+    box-shadow: 20px 20px 0px #f2faf2;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    .decor{
+        position: absolute;
+        z-index: -2;
+        max-width: 230px;
+        max-height: 230px;
+        top: -90px;
+        left: -140px;
+    }
+}
+
+.left-block{
+    padding: 30px 50px 40px;
+    max-width: 450px;
+    background-color: white;
+    z-index: 3;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
+.text{
+    color: #636662;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.img{
+    margin-right: 15px;
+}
+
+.contact-link{
+    display: flex;
+}
+
+.shedule-info{
+    display: flex;
+}
+
+.social-links{
+    display: flex;
+    a{
+        background-color: #d22730;
+        width: 32px;
+        height: 32px;
+        display: block;
+        border-radius: 100%;
+        margin-right: 20px;
+    }
+    img{
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin: 0 auto;
+        padding-top: 8px;
+    }
+}
+
+.right-block{
+    border-left: 1px solid #d1d9ce;
+    padding: 30px 60px 40px;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+}
+
+.right-block-form{
+    input{
+        width: 96.5%;
+        font-size: 16px;
+        height: 54px;
+        line-height: 54px;
+        outline: 1px solid #d1d9ce;
+        border: none;
+        border-radius: 12px;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+    textarea{
+        width: 96.5%;
+        font-size: 16px;
+        height: 54px;
+        line-height: 54px;
+        background: var(--clr-white);
+        border: 1px solid #d1d9ce;
+        border-radius: 12px;
+        padding: 0 15px;
+        resize: none;
+        overflow: auto;
+    }
+    input:focus{
+        border: none;
+    }
+    .message{
+        height: 102px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        text-align: start;
+    }
+}
+
+.right-block-title{
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.form-name-phone{
+    display: flex;
+    justify-content: space-between;
+    .input-phone{
+        margin-left: 20px;
+    }
+}
+
+.upload-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    input{
+        border: none;
+        width: 200px;
+        padding: 0;
+        opacity: 0;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    .btn{
+        background-color: #d22730;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.5s ease;
+        width: 177px;
+        justify-content: center;
+        button{
+            border: none;
+            background-color: #d22730;
+            color: white;
+            margin-right: 20px;
+            font-size: 14px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+    }
+    .input-upload{
+        display: flex;
+        position: absolute;
+        left: 0;
+        align-items: center;
+        z-index: -1;
+        cursor: pointer;
+        color: #d22730;
+        .input-upload-text{
+            margin-left: 20px;
+            p{
+                margin: 0;
+                text-align: start;
+                font-size: 16px;
+            }
+            .grey{
+                color: #636662;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.db{
+    display: block;
+}
+
+
+a{
+    text-decoration: none;
+    color: #636662;
+}
+
+.mt{
+    margin-top: 90px;
+}
