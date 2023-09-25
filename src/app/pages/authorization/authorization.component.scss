@@ -1,0 +1,39 @@
+a{
+    display: block;
+    margin-top: 50px;
+}
+
+.form-group{
+    width: 100%;
+    .w100{
+        width: 100%;
+    }
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .mat-mdc-form-field{
+        width: 80%;
+    }
+}
+
+.btn{
+    background-color: #b5d8f7;
+    color: black;
+    width: 80%;
+}
+
+.form-input{
+    width: 100%;
+}
+
+.d-flex{
+    display: flex;
+    .mr{
+        margin-right: 20px;
+    }
+}

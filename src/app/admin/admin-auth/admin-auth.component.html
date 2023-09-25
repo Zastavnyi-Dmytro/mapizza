@@ -1,0 +1,15 @@
+<form [formGroup]="authForm">
+    <div class="form-group">
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName = "email" placeholder="*Ваш Email">
+          </mat-form-field>
+    </div>
+    <div class="form-group">
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName = "password" placeholder="*Password">
+          </mat-form-field>
+    </div>
+    <button class="btn" mat-stroked-button *ngIf="!signUpCheck" mat-dialog-close (click)="login()">Увійти в кабінет</button>
+</form>

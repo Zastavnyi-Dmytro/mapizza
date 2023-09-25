@@ -12,7 +12,7 @@
                     <li><a [routerLink]="[ '/discounts']" routerLinkActive="active">Акції</a></li>
                     <li><a [routerLink]="[ '/contacts']" routerLinkActive="active">Контакти</a></li>
                     <li><a [routerLink]="[ '/vacancy']" routerLinkActive="active">Вакансії</a></li>
-                    <li><a [routerLink]="[ '/about-us']" routerLinkActive="active">Новини</a></li>
+                    <li><a [routerLink]="[ '/news']" routerLinkActive="active">Новини</a></li>
                     <li><a href="" class="feedback">Відгук</a></li>
                 </ul>
             </div>
@@ -24,47 +24,54 @@
                 <div class="header-favorite">
                     <mat-icon>favorite</mat-icon>
                 </div>
-                <div class="header-cabinet-btn">
+                <div *ngIf="!isLogin" class="header-cabinet-btn" (click)="openLoginDialog()">
                     <mat-icon>person</mat-icon>
-                    <button type="button">Вхід</button>
+                    <button type="button" *ngIf="!isLogin">Вхід</button>
+                </div>
+                <div *ngIf="isLogin" class="header-cabinet-btn" [routerLink]="[ '/'+loginUrl]" routerLinkActive="activeUser">
+                    <mat-icon>person</mat-icon>
+                    <button type="button">Кабінет</button>
+                </div>
+                <div *ngIf="isLogin" class="header-cabinet-btn" (click)="logout()">
+                    <button type="button">Вихід</button>
                 </div>
             </div>
         </div>
         <div class="header-bottom">
-            <a href="https://mapizza.com.ua/" class="header-logo">
+            <a [routerLink]="['']" routerLinkActive="activeHome" class="header-logo">
                 <img src="https://mapizza.com.ua/wp-content/uploads/2022/03/logo-pizza-red.svg" alt="лого">
             </a>
             <div class="menu-list">
                 <ul>
                     <li>
-                        <a href="">
+                        <a [routerLink]="[ '/products/pizza']" routerLinkActive="active">
                             <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-1.svg" class="img" alt="піца">
                             <span>ПІЦА</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a [routerLink]="[ '/products/salads']" routerLinkActive="active">
                             <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-2.svg" class="img" alt="салати">
                             <span>САЛАТИ</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a [routerLink]="[ '/products/desserts']" routerLinkActive="active">
                             <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-3.svg" class="img" alt="десерти">
                             <span>ДЕСЕРТИ</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a [routerLink]="[ '/products/drinks']" routerLinkActive="active">
                             <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-4.svg" class="img" alt="напої">
                             <span>НАПОЇ</span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="header-basket">
+            <div class="header-basket" (click)="openBasket()">
                 <mat-icon>shopping_cart</mat-icon>
-                <p>0 грн</p>
+                <p>{{total}} грн</p>
             </div>
         </div>
     </div>

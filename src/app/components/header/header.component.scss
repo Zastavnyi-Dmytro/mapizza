@@ -139,6 +139,7 @@
     .header-basket{
         display: flex;
         align-items: center;
+        cursor: pointer;
         p{
             width: 80px
         }
@@ -163,5 +164,15 @@
       display: none;
     }
 }
+
+.active{
+    span{
+        color: #009246;
+    }
+    border-bottom: 3px solid #009246;
+    border-radius: 2px;
+}
+
+
 
 

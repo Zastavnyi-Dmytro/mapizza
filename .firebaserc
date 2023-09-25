@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mapizza-7bcb6": {
+      "hosting": {
+        "mapizza": [
+          "mapizza-7bcb6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mapizza-7bcb6"
+  }
+}

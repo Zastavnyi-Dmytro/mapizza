@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="choose-category">
+        <a [routerLink]="[ '/admin/discounts']" routerLinkActive="active">Акції</a>
+        <a [routerLink]="[ '/admin/category']" routerLinkActive="active">Категорії</a>
+        <a [routerLink]="[ '/admin/products']" routerLinkActive="active">Товари</a>
+        <a [routerLink]="[ '/admin/order']" routerLinkActive="active">Замовлення</a>
+    </div>
+    <div class="actions">
+        <button (click)="openAddMenu()" class="btn">ДОДАТИ ПРОДУКТ </button>
+        <div *ngIf="addMenu" class="add-module" [formGroup]="productForm">
+            <select formControlName="category" class="form-select">
+                <option [ngValue]="category" *ngFor="let category of adminCategories">{{category.name}}</option>
+            </select>
+            <div class="title-inputs">
+                <input type="text" formControlName = "name" placeholder="*Назва">
+                <input type="text" formControlName = "path" placeholder="*Шлях">
+            </div>
+            <textarea class="input" formControlName = "ingredients" placeholder="*Інгредієнти"></textarea>
+            <div class="title-inputs">
+                <input type="text" formControlName = "weight" placeholder="*Вага">
+                <input type="text" formControlName = "price" placeholder="*Ціна">
+            </div>
+            <ng-container *ngIf="!isUploaded">
+                <input type="file" (change)="upload($event)" class="upload">
+                <progress value={{uploadPercent}} max="100" *ngIf="showProgress" class="progress"></progress>
+            </ng-container>
+            <ng-container *ngIf="isUploaded" class="upload-done">
+                <img [src]="valueByControl('img')" class="upload-img">
+                <button (click)="deleteImg()" class="btn upload-btn">Видалити зображення</button>
+            </ng-container>
+            <button *ngIf="!editMode" class="btn btn-add" [disabled]="productForm.invalid" type="submit" (click)="addProduct()">ДОДАТИ</button>
+            <button *ngIf="editMode" class="btn btn-add" [disabled]="deletedImg" type="submit" (click)="addProduct()">ЗБЕРЕГТИ</button>
+        </div>
+        <table>
+            <tr>
+                <td>№</td>
+                <td>Категорія</td>
+                <td>Назва</td>
+                <td>Інгредієнти</td>
+                <td>Вага</td>
+                <td>Ціна</td>
+                <td>Картинка</td>
+                <td>Дії</td>
+            </tr>
+            <tr *ngFor="let item of adminProducts; index as i">
+                <td>№{{i+1}}</td>
+                <td>{{item.path}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.ingredients | slice:0:60}} <span *ngIf="item.ingredients.length > 60">...</span></td>
+                <td>{{item.weight}}г</td>
+                <td>{{item.price}}грн</td>
+                <td><img src="{{item.img}}"></td>
+                <td class="tr-btns">
+                    <button (click)="editProduct(item)">Редагувати</button>
+                    <button [disabled]="editMode" (click)="deleteProduct(item)">Видалити</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,1 +1,14 @@
-<p>discounts works!</p>
+<div class="container">
+    <h1>Акції</h1>
+    <div class="discounts" *ngFor="let item of userDiscounts">
+        <img [routerLink]="[ '/discounts/'+ item.name, item.id]" routerLinkActive="active" [src]="item.img" alt="">
+        <div class="discounts-text">
+            <h3 class="name" [routerLink]="[ '/discounts/'+ item.name, item.id]" routerLinkActive="active">{{item.name}}</h3>
+            <span>{{item.description | slice:0:340}} <span *ngIf="item.description.length > 340">...</span></span>
+            <a class="btn">
+                <button>Дізнатися більше</button>
+                <mat-icon class="arrow">navigate_next</mat-icon>
+            </a>
+        </div>
+    </div>
+</div>

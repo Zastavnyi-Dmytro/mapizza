@@ -16,7 +16,17 @@ import { HomeComponent } from './pages/home/home.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { AlertModule } from '@coreui/angular';
-import { CarouselModule } from '@coreui/angular'
+import { CarouselModule } from '@coreui/angular';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AuthorizationComponent } from './pages/authorization/authorization.component'
+import { SharedModule } from './shared/shared-module';
+import { ProductComponent } from './pages/products/product/product.component';
+import { ProductInfoComponent } from './pages/products/product-info/product-info.component';
+import { BasketComponent } from './pages/basket/basket.component';
 
 
 @NgModule({
@@ -30,7 +40,11 @@ import { CarouselModule } from '@coreui/angular'
     ContactsComponent,
     VacancyComponent,
     NewsComponent,
-    HomeComponent
+    HomeComponent,
+    AuthorizationComponent,
+    ProductComponent,
+    ProductInfoComponent,
+    BasketComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +52,12 @@ import { CarouselModule } from '@coreui/angular'
     BrowserAnimationsModule,
     MatIconModule,
     AlertModule,
-    CarouselModule
+    CarouselModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

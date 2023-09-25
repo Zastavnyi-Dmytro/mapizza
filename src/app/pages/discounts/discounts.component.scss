@@ -1,0 +1,80 @@
+.container{
+    margin-top: 220px;
+    width: 100%;
+    max-width: 1730px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.discounts{
+    display: flex;
+    justify-content: center;
+    img{
+        border-radius: 12px;
+        object-fit: cover;
+        width: 706px;
+        height: 395px;
+    }
+    margin-bottom: 90px;
+}
+
+.discounts-text{
+    margin-left: 50px;
+    width: 30%;
+    h3{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    span{
+        font-size: 16px;
+        color: #636662; 
+    }
+    .name{
+        cursor: pointer;
+    }
+    .name:hover{
+        color: #009246;
+    }
+}
+
+.btn{
+    background-color: #d22730;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    width: 177px;
+    justify-content: center;
+    margin-top: 30px;
+    button{
+        border: none;
+        background-color: #d22730;
+        color: white;
+        margin-right: 20px;
+        font-size: 14px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+    .arrow{
+        color: white;
+        outline: 1px solid white;
+        border-radius: 100%;
+    }
+}
+
+.btn:hover{
+    background-color: #009246;
+    button{
+        background-color: #009246;
+    }
+}
