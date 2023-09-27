@@ -6,7 +6,7 @@
             <h3 class="name" [routerLink]="[ '/discounts/'+ item.name, item.id]" routerLinkActive="active">{{item.name}}</h3>
             <span>{{item.description | slice:0:340}} <span *ngIf="item.description.length > 340">...</span></span>
             <a class="btn">
-                <button>Дізнатися більше</button>
+                <button [routerLink]="[ '/discounts/'+ item.name, item.id]" routerLinkActive="active">Дізнатися більше</button>
                 <mat-icon class="arrow">navigate_next</mat-icon>
             </a>
         </div>

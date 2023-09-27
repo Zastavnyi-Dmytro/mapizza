@@ -60,5 +60,7 @@ export class BasketComponent {
     }
     localStorage.setItem('basket', JSON.stringify(basket));
     this.loadBasket()
+    this.orderServive.changeTotal.next(this.total);
+    this.orderServive.changeCount.next(basket.length)
   }
 }

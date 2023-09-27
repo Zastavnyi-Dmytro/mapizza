@@ -1,1 +1,28 @@
-<p>product-info works!</p>
+<div class="breadcrumbs" *ngIf="currentProduct">
+    <a [routerLink]="[ '/home']" routerLinkActive="active">Головна</a>
+    <span> ● </span>
+    <a [routerLink]="[ '/products/'+ currentProduct.category.path]" routerLinkActive="active">{{currentProduct.category.name}}</a>
+    <span> ● </span>
+    <span>{{currentProduct.name}}</span>
+  </div>
+  <div class="container" *ngIf="currentProduct">
+      <div class="product-block">
+          <img [src]="currentProduct.img" alt="">
+          <div class="right-block">
+              <h3>{{currentProduct.name}}</h3>
+          <div class="desc-block">
+            <div class="ingredients"><span>Склад:</span>{{currentProduct.ingredients}}</div>
+            <div class="weight"><span>Вага:</span>{{currentProduct.weight}} г</div>
+          </div>
+          <div class="action-block">
+            <div class="price"><b>{{currentProduct.price * currentProduct.count}}</b> грн</div>
+            <div class="count">
+              <button class="btn" type="button" (click)="productCount(currentProduct, false)">-</button>
+              <input type="text" [value]="currentProduct.count">
+              <button class="btn" type="button" (click)="productCount(currentProduct, true)">+</button>
+            </div>
+            <button class="btn" (click)="addToBasket(currentProduct)">Замовити</button>
+          </div>
+          </div>
+      </div>
+  </div>

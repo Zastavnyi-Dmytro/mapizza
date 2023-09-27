@@ -20,6 +20,7 @@ export class HeaderComponent {
   loginPage = ''
   burgerSwitch = false
   public total = 0
+  count = 0
 
   currentProduct!:Products
   public basket: Array<Products> = [];
@@ -36,6 +37,8 @@ export class HeaderComponent {
     this.checkUpdateUserLogin();
     this.loadBasket();
     this.updateBasket();
+    this.updateTotal();
+    this.updateCount();
   }
 
   @HostListener('window:scroll', [])
@@ -59,7 +62,7 @@ export class HeaderComponent {
     }
     else if(user && user.role === "USER"){
       this.isLogin = true
-      this.loginUrl = 'user-profile/info'
+      this.loginUrl = 'user/cabinet'
       this.loginPage = 'User'
     }
     else{
@@ -133,5 +136,15 @@ export class HeaderComponent {
       .reduce((total: number, prod: Products) => total + prod.count * prod.price, 0);
   }
 
+  updateTotal() {
+    this.orderServive.changeTotal.subscribe((newTotal: number) => {
+      this.total = newTotal;
+    });
+  }
 
+  updateCount(){
+    this.orderServive.changeCount.subscribe((newCount:number) =>{
+      this.count = newCount
+    })
+  }
 }

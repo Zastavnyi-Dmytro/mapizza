@@ -1,0 +1,14 @@
+<div class="breadcrumbs" *ngIf="currentDiscount">
+    <a [routerLink]="[ '/home']" routerLinkActive="active">Головна</a>
+    <span> ● </span>
+    <a [routerLink]="[ '/discounts']" routerLinkActive="active">Акції</a>
+    <span> ● </span>
+    <span>{{currentDiscount.name}}</span>
+  </div>
+<div class="container" *ngIf="currentDiscount">
+    <div class="banner">
+        <h2 class="title">{{currentDiscount.name}}</h2>
+        <div class="opacity"></div>
+    </div>
+    <span>{{currentDiscount.description}}</span>
+</div>

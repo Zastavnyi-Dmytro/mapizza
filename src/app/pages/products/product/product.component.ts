@@ -12,7 +12,6 @@ import { ProductsService } from 'src/app/shared/services/products/products.servi
 })
 export class ProductComponent {
   public userProducts:Array<Products> = []
-  public activeRolls = false
   public currentProduct!:Products
   private eventSubscription!:Subscription
 
@@ -37,11 +36,6 @@ export class ProductComponent {
     const categoryName = this.activatedRoute.snapshot.paramMap.get('category') as string;
     this.productService.getProductsByCategory(categoryName).then(data=>{
       this.userProducts = data.products
-      if (data.products.length > 0 && data.products[0].path === 'rolls') {
-        this.activeRolls = true;
-      } else {
-        this.activeRolls = false;
-      }
     })
   }
 
@@ -66,6 +60,7 @@ export class ProductComponent {
     localStorage.setItem('basket', JSON.stringify(basket));
     product.count = 1;
     this.orderService.changeBasket.next(true);
+    this.orderService.changeCount.next(basket.length)
   }
 
   productCount(product:Products, value:boolean):void{

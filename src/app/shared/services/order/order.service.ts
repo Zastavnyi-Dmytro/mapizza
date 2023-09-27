@@ -7,6 +7,8 @@ import { Subject } from 'rxjs';
 export class OrderService {
 
   changeBasket = new Subject<boolean>();
+  changeTotal = new Subject<number>();
+  changeCount = new Subject<number>();
 
   constructor() { }
 }

@@ -58,6 +58,7 @@ $warn-default-value: (
 
 .basket-dialog{
     width: 540px;
+    height: calc(100% - 74px);
     min-height: 300px;
     text-align: center;
 }

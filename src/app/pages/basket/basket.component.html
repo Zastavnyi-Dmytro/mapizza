@@ -1,14 +1,17 @@
+<h2>Кошик</h2>
 <div class="header-basket-popup">
-    <div class="top-block-basket" *ngFor="let item of basket">
-        <img [src]="item.img" alt="">
+    <div class="top-block-basket">
+        <div class="basket-products"  *ngFor="let item of basket">
+            <img [src]="item.img" alt="">
         <span>{{item.name}}</span>
         <div class="count">
             <button class="btn" type="button" (click)="productCount(item, false)">-</button>
             <input type="text" [value]="item.count">
             <button class="btn" type="button" (click)="productCount(item, true)">+</button>
         </div>
-        <div class="price">{{item.price * item.count}}</div>
+        <div class="price">{{item.price * item.count}} грн</div>
         <div class="delete" (click)="deleteItem(item)">🗑️</div>
+        </div>
     </div>
     <div class="bot-block-basket">
         <div class="total-price">Сума: {{total}} грн</div>

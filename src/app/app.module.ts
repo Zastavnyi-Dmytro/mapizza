@@ -27,6 +27,7 @@ import { SharedModule } from './shared/shared-module';
 import { ProductComponent } from './pages/products/product/product.component';
 import { ProductInfoComponent } from './pages/products/product-info/product-info.component';
 import { BasketComponent } from './pages/basket/basket.component';
+import { DiscountInfoComponent } from './pages/discount-info/discount-info.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { BasketComponent } from './pages/basket/basket.component';
     ProductComponent,
     ProductInfoComponent,
     BasketComponent,
+    DiscountInfoComponent,
   ],
   imports: [
     BrowserModule,

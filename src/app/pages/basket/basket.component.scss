@@ -1,14 +1,18 @@
 .header-basket-popup{
     border-top: 1px solid #dcdcdc;
+    display: flex;
+    height: calc(100% - 78px);
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.top-block-basket{
+.basket-products{
     display: flex;
     background-color: white;
     align-items: center;
     justify-content: space-around;
     img{
-        width: 200px;
+        width: 120px;
         height: 100px;
         object-fit: contain;
     }
@@ -26,6 +30,24 @@
             padding-left: 10px;
             font-size: 16px;
         }
+        .btn{
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 10px;
+            line-height: 14px;
+            font-weight: bold;
+            border: none;
+            background-color: #d22730;
+            color: white;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: #009246;
+            button{
+                background-color: #009246;
+            }
+        }
     }
     span{
         font-size: 16px;
@@ -39,16 +61,11 @@
 
 .bot-block-basket{
     height: 100px;
-    background-color: #b5d8f7;
-    background-image: url(https://monosushi.com.ua/wp-content/themes/monosushi/img/bg-monosushi-logo.svg), url(https://monosushi.com.ua/wp-content/themes/monosushi/img/bg-monosushi-logo.svg);
-    background-repeat: repeat;
-    background-position: 0 0, 190px -52px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    border-top: 1px solid #dcdcdc;
     .total-price{
         font-size: 25px;
     }
@@ -56,12 +73,13 @@
         padding: 15px;
         font-size: 20px;
         border: none;
-        background-color: white;
+        background-color: #d22730;
         border-radius: 10px;
         font-weight: bold;
+        color: white;
     }
     button:hover{
-        background-color: #b5d8f7;
+        background-color: #009246;
         outline: 1px solid white;
         cursor: pointer;
     }

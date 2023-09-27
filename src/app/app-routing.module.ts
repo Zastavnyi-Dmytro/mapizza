@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { DeliveryAndPaymentComponent } from './pages/delivery-and-payment/delivery-and-payment.component';
@@ -10,12 +10,14 @@ import { NewsComponent } from './pages/news/news.component';
 import { authGuard } from './shared/guards/auth/auth.guard';
 import { ProductComponent } from './pages/products/product/product.component';
 import { ProductInfoComponent } from './pages/products/product-info/product-info.component';
+import { DiscountInfoComponent } from './pages/discount-info/discount-info.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'dostavka', component: DeliveryAndPaymentComponent },
   { path: 'discounts', component: DiscountsComponent },
+  { path: 'discounts/:name/:id', component: DiscountInfoComponent},
   { path: 'contacts', component: ContactsComponent },
   { path: 'vacancy', component: VacancyComponent },
   { path: 'news', component: NewsComponent},
@@ -27,7 +29,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    {
+      preloadingStrategy: PreloadAllModules
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

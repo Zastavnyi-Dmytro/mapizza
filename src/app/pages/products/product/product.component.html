@@ -1,69 +1,26 @@
 <div class="container">
-    <div class="tabs">
-      <ng-container *ngIf="activeRolls">
-        <mat-tab-group>
-          <mat-tab label="Всі">
-            <div class="products">
-              <div class="product-block" *ngFor="let product of userProducts">
-                <a [routerLink]="[ '/products/'+ product.category.path, product.id]" routerLinkActive="active"><img [src]="product.img" alt=""></a>
-                <h3 class="product-name" [routerLink]="[ '/products/'+ product.category.path, product.id]" routerLinkActive="active">{{product.name}}</h3>
-                <div class="desc-block">
-                  <div class="ingredients">{{product.ingredients}}</div>
-                  <div class="weight">{{product.weight}} г</div>
-                </div>
-                <div class="action-block">
-                  <div class="price"><b>{{product.price}}</b> грн</div>
-                  <div class="count">
-                    <button class="btn" type="button" (click)="productCount(product, false)">-</button>
-                    <input type="text" [value]="product.count">
-                    <button class="btn" type="button" (click)="productCount(product, true)">+</button>
-                  </div>
-                  <button class="btn" (click)="addToBasket(product)">Замовити</button>
-                </div>
-              </div>
-            </div>
-          </mat-tab>
-          <mat-tab label="Філадельфія">
-            <p>Нажаль товару ще немає!</p>
-          </mat-tab>
-          <mat-tab label="Каліфорнія">
-            <p>Нажаль товару ще немає!</p>
-          </mat-tab>
-          <mat-tab label="Запечені">
-            <p>Нажаль товару ще немає!</p>
-          </mat-tab>
-          <mat-tab label="Фірмові">
-            <p>Нажаль товару ще немає!</p>
-          </mat-tab>
-          <mat-tab label="Макі">
-            <p>Нажаль товару ще немає!</p>
-          </mat-tab>
-          <mat-tab label="Преміум">
-            <p>Нажаль товару ще немає!</p>
-          </mat-tab>
-        </mat-tab-group>
-      </ng-container>
-      <ng-container *ngIf="!activeRolls">
-        <div class="products">
-          <div class="product-block" *ngFor="let product of userProducts">
-            <a [routerLink]="[ '/products/'+ product.category.path, product.id]" routerLinkActive="active"><img [src]="product.img" alt=""></a>
-            <h3 class="product-name" [routerLink]="[ '/products/'+ product.category.path, product.id]" routerLinkActive="active">{{product.name}}</h3>
-            <div class="desc-block">
-              <div class="ingredients">{{product.ingredients}}</div>
-              <div class="weight">{{product.weight}} г</div>
-            </div>
-            <div class="action-block">
-              <div class="price"><b>{{product.price}}</b> грн</div>
-              <div class="count">
-                <button class="btn" type="button" (click)="productCount(product, false)">-</button>
-                <input type="text" [value]="product.count">
-                <button class="btn" type="button" (click)="productCount(product, true)">+</button>
-              </div>
-              <button class="btn" (click)="addToBasket(product)">Замовити</button>
-            </div>
-          </div>
+  <div class="products">
+    <div class="product-block" *ngFor="let product of userProducts">
+      <a [routerLink]="[ '/products/'+ product.category.path, product.id]" routerLinkActive="active"><img
+          [src]="product.img" alt=""></a>
+      <div class="text-block">
+        <h3 class="product-name" [routerLink]="[ '/products/'+ product.category.path, product.id]"
+        routerLinkActive="active">{{product.name}}</h3>
+      <div class="desc-block">
+        <p class="ingredients">{{product.ingredients}}</p>
+      </div>
+      <div class="weigth-and-price">
+        <div class="price"><b>{{product.price}} грн<span>/{{product.weight}} г</span></b></div>
+      </div>
+      <div class="action-block">
+        <div class="count">
+          <button class="btn" type="button" (click)="productCount(product, false)">-</button>
+          <input type="text" [value]="product.count">
+          <button class="btn" type="button" (click)="productCount(product, true)">+</button>
         </div>
-      </ng-container>
-      
+        <button class="btn" (click)="addToBasket(product)">Замовити</button>
+      </div>
+      </div>
+    </div>
   </div>
-  </div>
+</div>

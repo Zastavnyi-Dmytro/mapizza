@@ -6,7 +6,8 @@
                     <div class="carousel-left">
                         <div class="carousel-left-text">
                             <div class="decor">
-                                <img src="https://mapizza.com.ua/wp-content/uploads/2022/03/banner-decor.svg" alt="banner decor">
+                                <img src="https://mapizza.com.ua/wp-content/uploads/2022/03/banner-decor.svg"
+                                    alt="banner decor">
                             </div>
                             <h2>{{slide.title}}</h2>
                             <p>{{slide.subtitle}}</p>
@@ -16,8 +17,10 @@
                             </a>
                         </div>
                         <div class="corousel-left-nav">
-                            <c-carousel-control [routerLink] class="carousel-nav prev" caption="«" direction="prev"></c-carousel-control>
-                            <c-carousel-control [routerLink] class="carousel-nav next" caption="»" direction="next"></c-carousel-control>
+                            <c-carousel-control [routerLink] class="carousel-nav prev" caption="«"
+                                direction="prev"></c-carousel-control>
+                            <c-carousel-control [routerLink] class="carousel-nav next" caption="»"
+                                direction="next"></c-carousel-control>
                         </div>
                     </div>
                     <div class="carousel-right">
@@ -26,6 +29,32 @@
                 </div>
             </c-carousel-item>
         </c-carousel-inner>
-
     </c-carousel>
+</div>
+<div class="product-container">
+    <h2>Піца Львів</h2>
+    <div class="products">
+        <div class="product-block" *ngFor="let product of userProducts">
+            <a [routerLink]="[ '/products/'+ product.category.path, product.id]" routerLinkActive="active"><img
+                    [src]="product.img" alt=""></a>
+            <div class="text-block">
+                <h3 class="product-name" [routerLink]="[ '/products/'+ product.category.path, product.id]"
+                    routerLinkActive="active">{{product.name}}</h3>
+                <div class="desc-block">
+                    <p class="ingredients">{{product.ingredients}}</p>
+                </div>
+                <div class="weigth-and-price">
+                    <div class="price"><b>{{product.price}} грн<span>/{{product.weight}} г</span></b></div>
+                </div>
+                <div class="action-block">
+                    <div class="count">
+                        <button class="product-btn" type="button" (click)="productCount(product, false)">-</button>
+                        <input type="text" [value]="product.count">
+                        <button class="product-btn" type="button" (click)="productCount(product, true)">+</button>
+                    </div>
+                    <button class="product-btn" (click)="addToBasket(product)">Замовити</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
