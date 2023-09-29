@@ -19,12 +19,19 @@ form{
     .mat-mdc-form-field{
         width: 80%;
     }
+    .btn{
+        color: white;
+    }
 }
 
 .btn{
-    background-color: #b5d8f7;
-    color: black;
+    background-color: #d22730;
     width: 80%;
+    cursor: pointer;
+}
+
+.btn:disabled{
+    background-color: #ca5359;
 }
 
 .form-input{

@@ -4,7 +4,27 @@
         <a [routerLink]="[ '/user/cabinet']" routerLinkActive="active">Особисті дані</a>
         <a [routerLink]="[ '/user/history']" routerLinkActive="active">Історія замовлень</a>
         <a [routerLink]="[ '/user/change-password']" routerLinkActive="active">Зміна паролю</a>
+        <a [routerLink]="[ '/user/favorite']" routerLinkActive="active">Улюблені</a>
     </div>
     <div class="actions">
+        <div class="actions-wrapper" [formGroup]="userValue">
+            <img class="decor dec-left" src="https://mapizza.com.ua/wp-content/themes/mamma-italiana/img/decor-img-6.svg" alt="">
+            <img class="decor dec-right" src="https://mapizza.com.ua/wp-content/themes/mamma-italiana/img/decor-img-5.svg" alt="">
+            <h3>Особисті дані</h3>
+            <div class="two-inputs">
+                <input type="text" formControlName = "firstName">
+                <input type="text" formControlName = "lastName">
+            </div>
+            <input class="inp-birthday" formControlName = "birthday" type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+            <div class="two-inputs">
+                <input type="text" formControlName = "email">
+                <input type="text" formControlName = "phoneNumber">
+            </div>
+            <div class="address">
+                <h3>Адреса доставки</h3>
+                <button class="add-btn">Додати ще одну адресу</button>
+            </div>
+            <button mat-stroked-button class="btn" (click)="editUserValue()">Зберегти зміни</button>
+        </div>
     </div>
 </div>

@@ -38,6 +38,7 @@ export class AuthorizationComponent {
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required]],
       confirmPassword: [null, [Validators.required]],
+      birthday:[null]
     })
   }
 
@@ -92,7 +93,8 @@ export class AuthorizationComponent {
       lastName: this.authForm.value.lastName,
       phoneNumber: this.authForm.value.phoneNumber,
       orders: [],
-      role: 'USER'
+      role: 'USER',
+      birthday: this.authForm.value.birthday
     }
     setDoc(doc(this.afs, 'users', credential.user.uid), user)
   }

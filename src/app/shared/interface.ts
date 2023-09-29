@@ -49,3 +49,12 @@ export interface ProductsRequest {
   price: number,
   img: string
 }
+
+export interface User {
+  firstName:string,
+  lastName:string,
+  phoneNumber:string,
+  birthday:string,
+  email:string,
+  id: number | string
+}

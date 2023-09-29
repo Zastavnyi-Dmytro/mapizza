@@ -45,21 +45,6 @@ a:hover{
     color: white;
 }
 
-.actions{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-table{
-    border-bottom: 3px solid #009246;
-    border-spacing: 150px 30px;
-}
-
-table tr:first-child{
-    width: 200px;
-}
-
 .decor{
     position: absolute;
     max-width: 230px;
@@ -73,8 +58,7 @@ table tr:first-child{
 }
 
 .dec-right{
-    bottom: 8%;
+    bottom: -200px;
     right: -40px;
     transform: translate3d(0px, -82px, 0px);
 }
-
