@@ -30,6 +30,7 @@ import { BasketComponent } from './pages/basket/basket.component';
 import { DiscountInfoComponent } from './pages/discount-info/discount-info.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
