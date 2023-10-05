@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="choose-category">
+        <a [routerLink]="[ '/admin/discounts']" routerLinkActive="active">Акції</a>
+        <a [routerLink]="[ '/admin/category']" routerLinkActive="active">Категорії</a>
+        <a [routerLink]="[ '/admin/products']" routerLinkActive="active">Товари</a>
+        <a [routerLink]="[ '/admin/orders']" routerLinkActive="active">Замовлення</a>
+    </div>
+    <div class="actions">
+        <table>
+            <tr>
+                <td>№</td>
+                <td>Користувач</td>
+                <td>Замовлення</td>
+                <td>Дата</td>
+                <td>Статус</td>
+                <td>Ціна</td>
+                <td>Дії</td>
+            </tr>
+            <tr *ngFor="let item of adminOrders; index as i">
+                <td>{{i+1}}</td>
+                <td>{{item.ownerName}}</td>
+                <td class="block" *ngFor="let product of item.items; index as q">
+                    {{q+1}}.{{product.name}} ({{product.count}}шт.)
+                </td>
+                <td>{{item.date}}</td>
+                <td class="status-true" *ngIf="item.status">Виконано</td>
+                <td class="status-false" *ngIf="!item.status">Очікує</td>
+                <td>{{item.price}}грн</td>
+                <td class="tr-btns">
+                    <button (click)="deleteDiscount(item)">Видалити</button>
+                    <button (click)="completeOrder(item)">Виконати</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

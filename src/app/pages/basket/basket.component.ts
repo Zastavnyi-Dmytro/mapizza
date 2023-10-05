@@ -63,4 +63,26 @@ export class BasketComponent {
     this.orderServive.changeTotal.next(this.total);
     this.orderServive.changeCount.next(basket.length)
   }
+
+  buyProducts(){
+    let user = JSON.parse(localStorage.getItem('currentUser') as string)
+    let date = new Date()
+    let updateDate = `${date.getDate()}.${date.getMonth()+1}, ${date.getHours()}:${date.getMinutes()}`
+    const order = {
+      ownerId:user? user.uid:'guest',
+      ownerName:user? user.firstName+' '+user.lastName:'',
+      date:updateDate,
+      status:false,
+      price:this.total,
+      items:this.basket,
+      id:''
+    }
+    this.orderServive.create(order).then(()=>{
+      this.basket = []
+      localStorage.setItem('basket', JSON.stringify(this.basket));
+      this.loadBasket()
+      this.orderServive.changeTotal.next(this.total);
+      this.orderServive.changeCount.next(this.basket.length)
+    })
+  }
 }

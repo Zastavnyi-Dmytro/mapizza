@@ -58,3 +58,13 @@ export interface User {
   email:string,
   id: number | string
 }
+
+export interface Order {
+  ownerId:string,
+  ownerName:string,
+  date:string,
+  status:boolean,
+  price:number,
+  items:Array<Products>,
+  id:number|string
+}

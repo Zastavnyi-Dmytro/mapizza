@@ -53,10 +53,6 @@ export class ProductComponent {
     else {
       basket.push(product);
     }
-    let test = localStorage.getItem('basket')
-    if (test !== null && JSON.parse(test).length === 0) {
-      localStorage.clear()
-    }
     localStorage.setItem('basket', JSON.stringify(basket));
     product.count = 1;
     this.orderService.changeBasket.next(true);

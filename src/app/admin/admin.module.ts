@@ -6,6 +6,7 @@ import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { AdminDiscountsComponent } from './admin-discounts/admin-discounts.component';
 import { AdminCategoryComponent } from './admin-category/admin-category.component';
 import { AdminProductsComponent } from './admin-products/admin-products.component';
+import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
 
 
 
@@ -14,7 +15,8 @@ import { AdminProductsComponent } from './admin-products/admin-products.componen
     AdminAuthComponent,
     AdminDiscountsComponent,
     AdminCategoryComponent,
-    AdminProductsComponent
+    AdminProductsComponent,
+    AdminOrdersComponent
   ],
   imports: [
     CommonModule,

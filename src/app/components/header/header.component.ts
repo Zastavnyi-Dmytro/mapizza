@@ -107,6 +107,7 @@ export class HeaderComponent {
       this.basket = JSON.parse(localStorage.getItem('basket') as string);
     }
     this.getTotalPrice();
+    this.count = this.basket.length
   }
 
   getTotalPrice(): void {

@@ -3,7 +3,7 @@
         <div class="header-top scroll-hide" [class.hidden]="isHidden">
             <div class="header-phone">
                 <a href="">+38 097 18 306 18 </a>
-                <p>нд-чт 09:30 − 21:00 <br>  пт- сб 09:30 − 22:00 </p>
+                <p>нд-чт 09:30 − 21:00 <br> пт- сб 09:30 − 22:00 </p>
             </div>
             <div class="header-links">
                 <ul>
@@ -17,7 +17,8 @@
                 </ul>
             </div>
             <div class="header-info">
-                <img src="https://mapizza.com.ua/wp-content/themes/mamma-italiana/img/icons/i-header-top.svg" alt="годинник">
+                <img src="https://mapizza.com.ua/wp-content/themes/mamma-italiana/img/icons/i-header-top.svg"
+                    alt="годинник">
                 <p><b>29 хв</b> — середній час доставки</p>
             </div>
             <div class="header-user">
@@ -28,7 +29,8 @@
                     <mat-icon>person</mat-icon>
                     <button type="button" *ngIf="!isLogin">Вхід</button>
                 </div>
-                <div *ngIf="isLogin" class="header-cabinet-btn" [routerLink]="[ '/'+loginUrl]" routerLinkActive="activeUser">
+                <div *ngIf="isLogin" class="header-cabinet-btn" [routerLink]="[ '/'+loginUrl]"
+                    routerLinkActive="activeUser">
                     <mat-icon>person</mat-icon>
                     <button type="button">Кабінет</button>
                 </div>
@@ -45,34 +47,85 @@
                 <ul>
                     <li>
                         <a [routerLink]="[ '/products/pizza']" routerLinkActive="active">
-                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-1.svg" class="img" alt="піца">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-1.svg" class="img"
+                                alt="піца">
                             <span>ПІЦА</span>
                         </a>
                     </li>
                     <li>
                         <a [routerLink]="[ '/products/salads']" routerLinkActive="active">
-                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-2.svg" class="img" alt="салати">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-2.svg" class="img"
+                                alt="салати">
                             <span>САЛАТИ</span>
                         </a>
                     </li>
                     <li>
                         <a [routerLink]="[ '/products/desserts']" routerLinkActive="active">
-                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-3.svg" class="img" alt="десерти">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-3.svg" class="img"
+                                alt="десерти">
                             <span>ДЕСЕРТИ</span>
                         </a>
                     </li>
                     <li>
                         <a [routerLink]="[ '/products/drinks']" routerLinkActive="active">
-                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-4.svg" class="img" alt="напої">
+                            <img src="https://mapizza.com.ua/wp-content/uploads/2021/09/i-menu-4.svg" class="img"
+                                alt="напої">
                             <span>НАПОЇ</span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="header-basket" (click)="openBasket()">
-                <mat-icon>shopping_cart</mat-icon>
-                <i>{{count}}</i>
-                <p>{{total}} грн</p>
+            <div class="right-menu">
+                <div class="header-basket" (click)="openBasket()">
+                    <mat-icon>shopping_cart</mat-icon>
+                    <i>{{count}}</i>
+                    <p>{{total}} грн</p>
+                </div>
+                <div class="adapt-cabinet">
+                    <div *ngIf="isLogin" class="header-cabinet-btn" [routerLink]="[ '/'+loginUrl]"
+                        routerLinkActive="activeUser">
+                        <mat-icon>person</mat-icon>
+                    </div>
+                </div>
+                <div class="adapt-burger">
+                    <button mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item><a [routerLink]="[ '/about-us']" routerLinkActive="active">Про нас</a></button>
+                        <button mat-menu-item><a [routerLink]="[ '/dostavka']" routerLinkActive="active">Доставка та оплата</a></button>
+                        <button mat-menu-item><a [routerLink]="[ '/discounts']" routerLinkActive="active">Акції</a></button>
+                        <button mat-menu-item><a [routerLink]="[ '/contacts']" routerLinkActive="active">Контакти</a></button>
+                        <button mat-menu-item><a [routerLink]="[ '/vacancy']" routerLinkActive="active">Вакансії</a></button>
+                        <button mat-menu-item><a [routerLink]="[ '/news']" routerLinkActive="active">Новини</a></button>
+                    </mat-menu>
+                </div>
+            </div>
+        </div>
+        <div class="adapt-menu">
+            <div class="adapt-list">
+                <ul>
+                    <li>
+                        <a [routerLink]="[ '/products/pizza']" routerLinkActive="active">
+                            <span>ПІЦА</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="[ '/products/salads']" routerLinkActive="active">
+                            <span>САЛАТИ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="[ '/products/desserts']" routerLinkActive="active">
+                            <span>ДЕСЕРТИ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="[ '/products/drinks']" routerLinkActive="active">
+                            <span>НАПОЇ</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

@@ -78,15 +78,13 @@ td{
     }
 }
 
-.add-module{
-    display: flex;
-    flex-direction: column;
-    .btn-add{
-        width: 15%;
-    }
-    .btn-add:disabled{
-        pointer-events: none;
-    }
+a{
+    text-decoration: none;
+}
+
+.block{
+    display: block;
+    text-align: start;
 }
 
 .tr-btns{
@@ -109,85 +107,10 @@ td{
     }
 }
 
-.btn{
-    outline: 2px solid #009246;
-    padding: 10px;
-    border: none;
-    background-color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 20px;
+.status-true{
+    color: #009246;
 }
 
-.btn:hover{
-    background-color: #b5d8f7;
-}
-
-.title-inputs{
-    margin-top: 20px;
-    input{
-        padding: 10px;
-        border: none;
-        outline: 1px solid grey;
-        width: 15%;
-        margin-right: 15px;
-        border-radius: 10px;
-        font-size: 20px;
-    }
-}
-
-.input{
-    border: none;
-    outline: 1px solid grey;
-    width: 31%;
-    height: 150px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-top: 20px;
-    padding: 8px;
-    resize: none;
-}
-
-.upload{
-    padding: 10px;
-    border: none;
-    outline: 1px solid grey;
-    width: 31%;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.upload-img{
-    width: 481px;
-    max-height: 500px;
-    object-fit: cover;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-.upload-btn{
-    width: 31%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.progress{
-    width: 31%;
-    height: 30px;
-}
-
-.form-select{
-    width: 31%;
-    margin-top: 20px;
-    border: none;
-    outline: 1px solid grey;
-    font-size: 20px;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-a{
-    text-decoration: none;
+.status-false{
+    color: red;
 }
