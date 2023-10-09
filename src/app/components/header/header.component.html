@@ -82,9 +82,15 @@
                     <p>{{total}} грн</p>
                 </div>
                 <div class="adapt-cabinet">
-                    <div *ngIf="isLogin" class="header-cabinet-btn" [routerLink]="[ '/'+loginUrl]"
+                    <div *ngIf="!isLogin" class="header-cabinet-btn" (click)="openLoginDialog()">
+                        <mat-icon>person</mat-icon>
+                    </div>
+                    <div *ngIf="isLogin" class="header-cabinet btn" [routerLink]="[ '/'+loginUrl]"
                         routerLinkActive="activeUser">
                         <mat-icon>person</mat-icon>
+                    </div>
+                    <div *ngIf="isLogin" class="header-cabinet-btn" (click)="logout()">
+                        <button type="button">Вихід</button>
                     </div>
                 </div>
                 <div class="adapt-burger">

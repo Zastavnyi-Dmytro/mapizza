@@ -54,6 +54,13 @@ $warn-default-value: (
     width: 500px;
     min-height: 300px;
     text-align: center;
+    @media (max-width:576px) {
+      form{
+        .mat-mdc-form-field-infix{
+            width: 100%;
+        }
+    }
+    }
 }
 
 .basket-dialog{

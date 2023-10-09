@@ -313,3 +313,100 @@ a{
 .mt{
     margin-top: 90px;
 }
+
+@media (max-width:1440px) {
+    .container{
+        max-width: 1240px;
+        .banner{
+            width: 100%;
+        }
+        .section{
+            display: block;
+        }
+        .section-img{
+            img{
+                width: 100%;
+            }
+        }
+        .img{
+            width: 100%;
+        }
+        .contact-block{
+            width: 100%;
+        }
+        .text-img{
+            img{
+                width: 100%;
+            }
+        }
+        .benefits{
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .container{
+        max-width: 1140px;
+        .contact-block{
+            display: block;
+            .form-name-phone{
+                justify-content: start;
+            }
+        }
+        .right-block{
+            padding: 0;
+            .right-block-form{
+                input{
+                    padding: 0 5px;
+                }
+            }
+        }
+        .left-block{
+            padding: 0;
+        }
+        .db{
+            width: 100%;
+        }
+        .message{
+            padding: 0 5px;
+        }
+        .input-upload{
+            display: none;
+        }
+    }
+}
+@media (max-width:992px) {
+    .container{
+        max-width: 960px;
+        .benefits{
+            display: block;
+            text-align: center;
+            .benefits-item{
+                width: 100%;
+                padding: 0;
+                .title{
+                    font-size: 15px;
+                }
+                .info{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media (max-width:576px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media (max-width:340px) {
+    .container{
+        max-width: 320px;
+    }
+}

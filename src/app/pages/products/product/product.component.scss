@@ -110,3 +110,44 @@
 .text-block{
     padding: 20px;
 }
+
+@media (max-width:1440px) {
+    .container{
+        max-width: 1240px;
+    }
+}
+
+@media (max-width:1200px) {
+    .container{
+        max-width: 1140px;
+    }
+    .product-block{
+        width: 45%;
+    }
+}
+@media (max-width:992px) {
+    .container{
+        max-width: 960px;
+    }
+    .product-block{
+        width: 95%;
+    }
+    .ingredients{
+        margin-bottom: 40px;
+    }
+}
+@media (max-width:768px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media (max-width:576px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media (max-width:340px) {
+    .container{
+        max-width: 320px;
+    }
+}

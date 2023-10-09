@@ -119,3 +119,51 @@
 .db{
     display: block;
 }
+
+@media (max-width:1440px) {
+    .container, .delivery-and-payment, .payment{
+        max-width: 1240px;
+    }
+}
+
+@media (max-width:1200px) {
+    .container, .delivery-and-payment, .payment{
+        max-width: 1000px;
+        .zones{
+            display: block;
+            .zone{
+                padding: 15px 20px;
+            }
+        }
+    }
+}
+@media (max-width:992px) {
+    .container, .delivery-and-payment, .payment{
+        max-width: 800px;
+    }
+}
+@media (max-width:768px) {
+    .container, .delivery-and-payment, .payment{
+        max-width: 600px;
+        .map{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+@media (max-width:576px) {
+    .container, .delivery-and-payment, .payment{
+        max-width: 350px;
+        .first-zone{
+            display: block;
+        }
+        .second-zone{
+            width: 100%;
+        }
+    }
+}
+@media (max-width:340px) {
+    .container, .delivery-and-payment, .payment{
+        max-width: 320px;
+    }
+}

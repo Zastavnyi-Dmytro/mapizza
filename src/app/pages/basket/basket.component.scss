@@ -88,3 +88,27 @@
 .delete{
     cursor: pointer;
 }
+
+@media (max-width:576px) {
+    .basket-products{
+        img{
+            width: 80px;
+            height: 70px;
+            object-fit: contain;
+        }
+        .count{
+            padding: 5px;
+            input{
+                width: 10px;
+            }
+        }
+    }
+    .bot-block-basket{
+        .total-price{
+            font-size: 15px;
+        }
+        button{
+            font-size: 15px;
+        }
+    }
+}

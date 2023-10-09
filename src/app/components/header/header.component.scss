@@ -214,9 +214,27 @@
     display: none;
 }
 
+.header-cabinet-btn{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #d22730;
+    border-radius: 12px;
+    color: white;
+    margin-left: 20px;
+    button{
+        border: none;
+        background-color: #d22730;
+        color: white;
+        cursor: pointer;
+    }
+}
+
 @media (max-width:1440px) {
     .container{
         max-width: 1240px;
+        margin: 0 auto;
+        width: 100%;
     }
     .header-top{
         display: none;
@@ -271,6 +289,7 @@
             justify-content: space-around;
             .adapt-cabinet{
                 margin-right: 30px;
+                display: flex;
                 .mat-icon{
                     font-size: 30px;
                 }
@@ -307,21 +326,58 @@
 }
 @media (max-width:768px) {
     .container{
-        max-width: 720px;
+        max-width: 620px;
+        .right-menu{
+            width: 100%;
+            .adapt-cabinet{
+                margin-right: 0;
+            }
+        }
     }
 }
 @media (max-width:576px) {
     .container{
-        max-width: 540px;
+        max-width: 380px;
+        .header-logo{
+            img{
+                width: 90px;
+                height: 28px;
+            }
+        }
+        .header-bottom{
+            padding: 0;
+        }
+        .adapt-list{
+            ul{
+                padding: 0;
+                justify-content: start;
+                li{
+                    width: 50%;
+                    margin: 0 auto;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .header-cabinet-btn{
+            margin-left: 0;
+        }
+        .header-cabinet{
+            margin-right: 10px;
+        }
+        .header-basket{
+            p{
+                width: 100%;
+                font-size: 12px;
+            }
+            i{
+                top: -10px;
+            }
+        }
     }
 }
-@media (max-width:540px) {
+@media (max-width:340px) {
     .container{
-        width: 100%;
-        padding-right: 0.75rem;
-        padding-left: 0.75rem;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 320px;
     }
 }
 

@@ -293,3 +293,72 @@ a{
     text-decoration: none;
     color: #636662;
 }
+
+@media (max-width:1440px) {
+    .container{
+        max-width: 1240px;
+        .banner{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .container{
+        max-width: 1140px;
+        .contact-block{
+            display: block;
+            width: 100%;
+            .form-name-phone{
+                justify-content: start;
+            }
+        }
+        .right-block{
+            padding: 0;
+            .right-block-form{
+                input{
+                    padding: 0 5px;
+                }
+            }
+        }
+        .left-block{
+            padding: 0;
+        }
+        .db{
+            width: 100%;
+        }
+        .message{
+            padding: 0 5px;
+        }
+        .input-upload{
+            display: none;
+        }
+    }
+}
+@media (max-width:992px) {
+    .container{
+        max-width: 960px;
+        .blocks{
+            display: block;
+            .block{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media (max-width:576px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media (max-width:340px) {
+    .container{
+        max-width: 320px;
+    }
+}
